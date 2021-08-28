@@ -1,11 +1,11 @@
 // ANYZOOKA 28/8/2021
 
-function submitSuggestion(sEmailId, sSuggestId,sForWhatID) {
-    var sEmailToCheck = document.getElementById(sEmailId).value;
+function submitSuggestion(sUsernameId, sSuggestId,sForWhatID) {
+    var sUsernameToCheck = document.getElementById(sUsernameId).value;
     var sSuggestion = document.getElementById(sSuggestId).value;
     var sForWhat = document.getElementById(sForWhatID).value;
 
-    if (checkEmail(sEmailToCheck)) {
+    if (checkUsername(sUsernameToCheck)) {
         // POST TO SERVER
 
         try {
@@ -13,11 +13,11 @@ function submitSuggestion(sEmailId, sSuggestId,sForWhatID) {
 
             var sContentType = 'application/json; charset=UTF-8';
 
-            var url=/*sUrl = `https://hoi4modtool.pythonan*/"https://discord.com/api/webhooks/881188129552355448/"/*ywhere.com?email=${sEmailToCheck}&suggestion=${encodeURIComponent(sSuggestion)}&time=${javascript.basiclib.getTime}&cookieMonster=${(bool)cookiesYesOrNo()}`;*/ + "qAbQDFmbhGGqKt2NEXBvK1DqnC1z5ewo7T-5qNHTqixIfbGqsy9ySgBhHA_1QKUSPR5I";
+            var url=/*sUrl = `https://hoi4modtool.pythonan*/"https://discord.com/api/webhooks/881188129552355448/"/*ywhere.com?Username=${sUsernameToCheck}&suggestion=${encodeURIComponent(sSuggestion)}&time=${javascript.basiclib.getTime}&cookieMonster=${(bool)cookiesYesOrNo()}`;*/ + "qAbQDFmbhGGqKt2NEXBvK1DqnC1z5ewo7T-5qNHTqixIfbGqsy9ySgBhHA_1QKUSPR5I";
 
             // postData("GET", null, sContentType, sUrl);
 
-            var json = {"content": `-----NEW SUGGESTION-----\n**From:** ${sEmailToCheck}\n**For which product**: ${sForWhat}\n**Suggestion:**\n${sSuggestion}\n\n`};
+            var json = {"content": `-----NEW SUGGESTION-----\n**From:** ${sUsernameToCheck}\n**For which product**: ${sForWhat}\n**Suggestion:**\n${sSuggestion}\n\n`};
             json = JSON.stringify(json)
 
             postData("POST", json, "application/json", url)
@@ -28,7 +28,7 @@ function submitSuggestion(sEmailId, sSuggestId,sForWhatID) {
         }
 
     } else {
-        alert("Please submit a valid email");
+        alert("Please submit a valid discord username");
     }
     return false;
 }
@@ -44,6 +44,6 @@ function postData(sMethod, sContent, sContentType, sUrl) {
     return;
 }
 
-function checkEmail(sInput) {
-    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(sInput);
+function checkUsername(sInput) {
+    return sInput.search(/.+#\d{4}/i) == 0;
 }
