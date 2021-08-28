@@ -95,9 +95,9 @@ button:hover {
 }
 
 @media all and (min-width: 700px) {
-    .mainBody {
+    /* .mainBody {
         
-    }
+    } */
     .innerBody {
         display: table;
         margin: 0 auto;
