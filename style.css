@@ -9,7 +9,6 @@
 
 body {
     margin: 0;
-    padding: 0;
     background-color: white;
     color: black;
     font-family: var(--font);
@@ -21,11 +20,27 @@ canvas {
 }
 
 .mainBody {
-    position: absolute;
-    top: 50px;
+    /* position: absolute; */
+    /* top: 50px; */
+    padding-left: 10px;
+    padding-right: 10px;
     width: auto;
     height: auto;
     flex-wrap: wrap;
+}
+
+.downloadMenuImg {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 8px;
+}
+
+.downloadMenuImg:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.4), 0 12px 40px 0 rgba(0,0,0,0.4);
 }
 
 .mHeader {
@@ -70,7 +85,7 @@ button:hover {
 }
 
 .menuBar {
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     top: 0;
     width: 100%;
@@ -81,23 +96,22 @@ button:hover {
 
 @media all and (min-width: 700px) {
     .mainBody {
-        width: 100%;
+        
     }
     .innerBody {
         display: table;
         margin: 0 auto;
         width:auto;
-        padding: 10px;
         height:auto;
     }
 
 
-    button {
+    /* button {
         font-size: 40px;
     }
 
     body {
         font-size: 40px;
     }
-    
+     */
 }
