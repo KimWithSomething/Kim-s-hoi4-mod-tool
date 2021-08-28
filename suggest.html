@@ -3,19 +3,21 @@
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8" />
-        <title>HOI4 Mod tool main page</title>
+        <title>Suggestions</title>
         <script src="js/navBar.js"></script>
         <script src="js/suggest.js"></script>
     </head>
     <body> 
         <div class="mainBody">
+            <h1 class="mHeader">Suggestions</h1>
             <div class="innerBody">
-                <h1>Suggestions</h1>
             
-                <form onsubmit="return submitSuggestion('email', 'suggestion')">
+                <form onsubmit="return submitSuggestion('email', 'suggestion', 'forWhat')">
                     <input class="normalFont" id="email" name="email" value="Email" />
                     <br><br>
-                    <textarea class="normalFont" id="suggestion" name="suggestion" rows ="22" cols="22">Please enter suggestion here</textarea>
+                    <input class="normalFont" id="forWhat" name="forWhat" value="Name of mod/ product" />
+                    <br><br>
+                    <textarea class="normalFont" id="suggestion" name="suggestion" rows ="22" cols="40">Please enter suggestion here</textarea>
                     <br><br>
                     <input type="submit" />
                 </form>

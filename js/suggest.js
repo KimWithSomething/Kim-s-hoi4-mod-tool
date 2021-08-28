@@ -1,8 +1,9 @@
 // ANYZOOKA 28/8/2021
 
-function submitSuggestion(sEmailId, sSuggestId) {
+function submitSuggestion(sEmailId, sSuggestId,sForWhatID) {
     var sEmailToCheck = document.getElementById(sEmailId).value;
     var sSuggestion = document.getElementById(sSuggestId).value;
+    var sForWhat = document.getElementById(sForWhatID).value;
 
     if (checkEmail(sEmailToCheck)) {
         // POST TO SERVER
@@ -16,7 +17,7 @@ function submitSuggestion(sEmailId, sSuggestId) {
 
             // postData("GET", null, sContentType, sUrl);
 
-            var json = {"content": `-----NEW SUGGESTION-----\n**From:** ${sEmailToCheck}\n**Suggestion:**\n${sSuggestion}\n\n`};
+            var json = {"content": `-----NEW SUGGESTION-----\n**From:** ${sEmailToCheck}\n**For which product**: ${sForWhat}\n**Suggestion:**\n${sSuggestion}\n\n`};
             json = JSON.stringify(json)
 
             postData("POST", json, "application/json", url)
