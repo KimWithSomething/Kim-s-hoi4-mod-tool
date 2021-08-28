@@ -87,10 +87,10 @@ button:hover {
         display: table;
         margin: 0 auto;
         width:auto;
+        padding: 10px;
         height:auto;
     }
 
-    padding: 10px;
 
     button {
         font-size: 40px;
