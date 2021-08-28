@@ -3,6 +3,8 @@
 :root {
     --menu_bg-clr: #888;
     --font: Arial, sans-serif;
+    --menuButton_colour: #888;
+    --downloadButtonColour: rgb(0, 190, 0);
 }
 
 body {
@@ -11,6 +13,7 @@ body {
     background-color: white;
     color: black;
     font-family: var(--font);
+    font-size: 20px;
 }
 
 canvas {
@@ -19,11 +22,10 @@ canvas {
 
 .mainBody {
     position: absolute;
-    top: 60px;
+    top: 50px;
     width: auto;
     height: auto;
     flex-wrap: wrap;
-    padding-left: 10px;
 }
 
 .mHeader {
@@ -38,6 +40,29 @@ canvas {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    left: 10px;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.downloadButton {
+    background-color: var(--downloadButtonColour);
+    padding: 10px;
+}
+
+button {
+    font-size: 20px;
+    background-color: var(--menuButton_colour);
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: underline;
 }
 
 .normalFont {
