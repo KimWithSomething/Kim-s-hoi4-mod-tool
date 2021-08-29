@@ -3,11 +3,11 @@
 :root {
     --font: Arial, sans-serif;
     --menuButton_colour: #888;
-    --downloadButtonColour: rgb(0, 190, 0);
+    --downloadButtonColour: rgb(0, 140, 0);
     --linkColour: #888;
     --darkTextColour: #888;
     --normalTextColour: #ddd;
-    --backgroundColour: #333;
+    --backgroundColour: rgb(51,51,51);
     --divColour: #444;
     --menuColour: #222;
     font-size: larger;
@@ -23,10 +23,22 @@ body {
 
 a {
     color: var(--darkTextColour);
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+a:hover {
+    color: var(--normalTextColour);
 }
 
 a:visited {
     color: var(--darkTextColour);
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+a:visited:hover {
+    color: var(--normalTextColour);
 }
 
 canvas {

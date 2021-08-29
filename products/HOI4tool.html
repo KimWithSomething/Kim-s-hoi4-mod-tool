@@ -3,20 +3,20 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../style.css">
         <meta charset="utf-8" />
-        <title>HOI4 Mod tool main page</title>
+        <title>HOI4 Mod tool</title>
         <script src="../js/navBarDownloads.js"></script>
     </head>
     <body>
 
         <style>
             .banner {
-                background-image: url('../images/HOImodtool/banner.png');
-                width: 100%;
-                box-shadow: 0 0 8px 8px var(--backgroundColour) inset;
+                --imgUrl: url('../images/HOImodtool/banner.png'); /* SET THIS TO THE NEW BANNER. MUST BE 1920x500 PX */
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(51,51,51, 1) 100%), var(--imgUrl) no-repeat;
+                height: 441px;
             }
         </style>
 
-        <div class="banner" width="100%"><img src='../images/HOImodtool/banner.png'></div>
+        <div class="banner" width="100%" height="100"></div>
         <div class="mainBody">
             <div class="innerBody">
                 <h2>What is the HOI4 Modding Tool?</h2>
