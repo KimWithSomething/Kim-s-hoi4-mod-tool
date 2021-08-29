@@ -46,8 +46,8 @@ canvas {
 }
 
 .mainBody {
-    /* position: absolute; */
-    /* top: 50px; */
+    position: relative;
+    top: 50px;
     padding-left: 10px;
     padding-right: 10px;
     width: auto;
@@ -113,12 +113,14 @@ button:hover {
 
 .menuBar {
     /* position: absolute; */
+    position:fixed;
     left: 0;
     top: 0;
     width: 100%;
     min-height: 50px;
     height:auto;
     background-color: var(--menuColour);
+    z-index: 10000;
 }
 
 .downloadButton {
