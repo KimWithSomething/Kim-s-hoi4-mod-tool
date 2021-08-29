@@ -83,7 +83,7 @@ button:hover {
 }
 
 .credits {
-    position: absolute;
+    position:fixed;
     top:100%;
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);

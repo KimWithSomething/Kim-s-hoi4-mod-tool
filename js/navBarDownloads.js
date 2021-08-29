@@ -20,6 +20,9 @@ var navBar = `
         </tr>
     </table>
 </div>
+<div class="credits">
+    <p>Website by anyzooka#3945</p>
+</div>
 `
 
 document.write(navBar);
