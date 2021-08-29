@@ -1,18 +1,32 @@
 /* VARIABLES */
 
 :root {
-    --menu_bg-clr: #888;
     --font: Arial, sans-serif;
     --menuButton_colour: #888;
     --downloadButtonColour: rgb(0, 190, 0);
+    --linkColour: #888;
+    --darkTextColour: #888;
+    --normalTextColour: #ddd;
+    --backgroundColour: #333;
+    --divColour: #444;
+    --menuColour: #222;
+    font-size: larger;
 }
 
 body {
     margin: 0;
-    background-color: white;
+    background-color: var(--backgroundColour);
     color: black;
     font-family: var(--font);
-    font-size: 20px;
+    color: var(--normalTextColour);
+}
+
+a {
+    color: var(--darkTextColour);
+}
+
+a:visited {
+    color: var(--darkTextColour);
 }
 
 canvas {
@@ -36,6 +50,7 @@ canvas {
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s; /* Safari */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 75%;
     border-radius: 8px;
 }
 
@@ -51,33 +66,33 @@ canvas {
     /* position: relative;
     top: 10;
     left: 10%; */
+    color: var(--darkTextColour);
     margin: 0;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     left: 10px;
-    transition-duration: 0.4s;
-    -webkit-transition-duration: 0.4s; /* Safari */
-}
-
-.downloadButton {
-    background-color: var(--downloadButtonColour);
-    padding: 10px;
 }
 
 button {
-    font-size: 20px;
-    background-color: var(--menuButton_colour);
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s; /* Safari */
     border: none;
     border-radius: 4px;
+    background-color: var(--menuColour);
+    font-size: 20px;
 }
 
 button:hover {
     padding-left: 10px;
     padding-right: 10px;
     text-decoration: underline;
+}
+
+.credits {
+    position: absolute;
+    top:100%;
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    font-size: small;
 }
 
 .normalFont {
@@ -91,10 +106,16 @@ button:hover {
     width: 100%;
     min-height: 50px;
     height:auto;
-    background-color: var(--menu_bg-clr);
+    background-color: var(--menuColour);
 }
 
-@media all and (min-width: 700px) {
+.downloadButton {
+    background-color: var(--downloadButtonColour);
+    padding: 10px;
+    width: 25%;
+}
+
+@media all and (min-width: 500px) {
     /* .mainBody {
         
     } */
@@ -105,13 +126,8 @@ button:hover {
         height:auto;
     }
 
-
-    /* button {
-        font-size: 40px;
+    .downloadMenuImg {
+        width: 25%;
     }
-
-    body {
-        font-size: 40px;
-    }
-     */
+     
 }
