@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <meta charset="utf-8" />
+        <title>HOI4 Launcher</title>
+        <script src="../js/navBarDownloads.js"></script>
+    </head>
+    <body>
+
+        <style>
+            .banner {
+                --imgUrl: url('../images/HOIlauncher/banner.png'); /* SET THIS TO THE NEW BANNER. MUST BE 1920x500 PX */
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(51,51,51, 1) 100%), var(--imgUrl) no-repeat;
+                height: 500px;
+                position: relative;
+                top: 50px;
+            }
+        </style>
+
+        <div class="banner" width="100%" height="100"></div>
+        <div class="mainBody">
+            <div class="innerBody">
+                <h2>What is the HOI4 Launcher?</h2>
+                <p>
+                    Our launcher aims to make loading HOI4 as painless as possible. We all <br>
+                    know how painful the default HOI4 launcher is to use, with its slowness <br>
+                    and constant reloading of mods. This new version of the launcher has an <br>
+                    easy to use interface, which loads instantly, and which only reloads mods <br>
+                    when you tell it to.<br><br>
+                    Features are:
+                    <lu>
+                        <li>Easy to manage DLCs and mods</li>
+                        <li>Reloading mod lists for when you download new mods</li>
+                        <li>Adding command line arguments such as '-debug' & '-opengl'</li>
+                        <li>Playset loading & creation</li>
+                        <li>Creating a starting mod template for your own new mod</li>
+                    </lu>
+                </p>
+
+                <div class="downloadLinks">
+                    <br><a href="https://github.com/anyzooka1/HOI4-launcher/releases/latest/download/package.zip"><button class="downloadButton">Download HOI4 Launcher &darr;</button></a><br><br>
+                    <a href="https://github.com/anyzooka1/HOI4-launcher">View the GitHub repository</a>
+                </div><br><br><br>
+            </div>
+        </div>
+    </body>
+</html>
